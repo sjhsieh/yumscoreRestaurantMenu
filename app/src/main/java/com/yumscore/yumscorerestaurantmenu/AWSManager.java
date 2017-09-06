@@ -1,5 +1,7 @@
 package com.yumscore.yumscorerestaurantmenu;
 
+import android.os.Build;
+
 import com.amazonaws.auth.BasicAWSCredentials;
 import com.amazonaws.regions.Region;
 import com.amazonaws.regions.Regions;
@@ -9,8 +11,8 @@ import com.amazonaws.services.sns.AmazonSNSClient;
  */
 public class AWSManager {
 
-    private static final String _ACCESS_KEY_ID = "AKIAJNAZ7OHI6JIPJD4A";
-    private static final String _SECRET_KEY = "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";
+    private static final String _ACCESS_KEY_ID = BuildConfig.AWS_ACCESS_KEY;
+    private static final String _SECRET_KEY = BuildConfig.AWS_SECRET_KEY;
 
     private static AmazonSNSClient snsClient = null;
 

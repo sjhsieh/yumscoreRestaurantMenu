@@ -1,3 +1,9 @@
+Properties props = new Properties()
+File propsFile = file('../api/aws_key')
+if (propsFile.exists()) {
+    props.load(propsFile.newDataInputStream())
+}
+
 apply plugin: 'com.android.application'
 
 android {
@@ -10,6 +16,8 @@ android {
         versionCode 6
         versionName "1.5"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        buildConfigField "String", "AWS_SECRET_KEY", "\"${props.getProperty("secret_key")}\""
+        buildConfigField "String", "AWS_ACCESS_KEY", "\"${props.getProperty("access_key")}\""
     }
     buildTypes {
         release {
