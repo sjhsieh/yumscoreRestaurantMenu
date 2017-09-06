@@ -13,7 +13,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <receiver android:name=".BootReceiver">
+        <receiver android:name=".startup.BootReceiver">
             <intent-filter
                 android:priority="999">
                 <action android:name="android.intent.action.BOOT_COMPLETED"/>
@@ -21,7 +21,7 @@
         </receiver>
 
         <activity
-            android:name=".SplashActivity"
+            android:name=".startup.SplashActivity"
             android:screenOrientation="portrait"
             android:theme="@style/SplashTheme">
             <intent-filter>
@@ -31,26 +31,26 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".SetRestaurantActivity"
+            android:name=".startup.SetRestaurantActivity"
             android:screenOrientation="portrait"
             android:launchMode="singleTop"/>
         <activity
-            android:name=".MenuExpandableActivity"
+            android:name=".menu.MenuExpandableActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"
             android:theme="@style/MenuTheme">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.yumscore.yumscorerestaurantmenu.MenuVariantsActivity" />
+                android:value="com.yumscore.yumscorerestaurantmenu.menu.MenuVariantsActivity" />
         </activity>
         <activity
-            android:name=".ReviewPagerActivity"
+            android:name=".pager.ReviewPagerActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.yumscore.yumscorerestaurantmenu.MenuExpandableActivity" />
+                android:value="com.yumscore.yumscorerestaurantmenu.menu.MenuExpandableActivity" />
         </activity>
         <activity
             android:name=".AboutActivity"
@@ -59,22 +59,22 @@
             android:theme="@style/AppTheme">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.yumscore.yumscorerestaurantmenu.MenuExpandableActivity" />
+                android:value="com.yumscore.yumscorerestaurantmenu.menu.MenuExpandableActivity" />
         </activity>
         <activity
-            android:name=".MenuVariantsActivity"
+            android:name=".menu.MenuVariantsActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"
             android:theme="@style/MenuTheme">
         </activity>
         <service
-            android:name=".YumscoreFirebaseMessagingService">
+            android:name=".api.firebase.YumscoreFirebaseMessagingService">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT"/>
             </intent-filter>
         </service>
         <service
-            android:name=".YumscoreFirebaseInstanceIdService">
+            android:name=".api.firebase.YumscoreFirebaseInstanceIdService">
             <intent-filter>
                 <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
             </intent-filter>

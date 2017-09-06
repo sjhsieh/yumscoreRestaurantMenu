@@ -10,6 +10,8 @@ import android.os.IBinder;
 import android.preference.PreferenceManager;
 import android.util.Log;
 
+import com.yumscore.yumscorerestaurantmenu.startup.SplashActivity;
+
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 

@@ -7,24 +7,16 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.annotation.Nullable;
-import android.support.v4.view.ViewPager;
-import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.KeyEvent;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
 import static android.content.Intent.FLAG_ACTIVITY_REORDER_TO_FRONT;
-import static com.yumscore.yumscorerestaurantmenu.MenuExpandableActivity.EXTRA_KEY_DISH;
-import static com.yumscore.yumscorerestaurantmenu.MenuVariantsActivity.SHARED_PREFERENCES_IS_APP;
-import static com.yumscore.yumscorerestaurantmenu.MenuVariantsActivity.blockedKeys;
-import static com.yumscore.yumscorerestaurantmenu.MenuVariantsActivity.checkIsAppFlag;
-import static com.yumscore.yumscorerestaurantmenu.MenuVariantsActivity.clearIsAppFlag;
-import static com.yumscore.yumscorerestaurantmenu.MenuVariantsActivity.setIsAppFlag;
-import static com.yumscore.yumscorerestaurantmenu.R.id.reviewsPager;
-import static com.yumscore.yumscorerestaurantmenu.R.id.unlockButton2;
-import static com.yumscore.yumscorerestaurantmenu.SetRestaurantActivity.preventStatusBarExpansion;
+import static com.yumscore.yumscorerestaurantmenu.menu.MenuVariantsActivity.blockedKeys;
+import static com.yumscore.yumscorerestaurantmenu.menu.MenuVariantsActivity.checkIsAppFlag;
+import static com.yumscore.yumscorerestaurantmenu.menu.MenuVariantsActivity.clearIsAppFlag;
+import static com.yumscore.yumscorerestaurantmenu.menu.MenuVariantsActivity.setIsAppFlag;
+import static com.yumscore.yumscorerestaurantmenu.startup.SetRestaurantActivity.preventStatusBarExpansion;
 
 /**
  * Created by steve on 4/17/17.
