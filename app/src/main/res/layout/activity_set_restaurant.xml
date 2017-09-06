@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <TextView
+        android:text="@string/find_menu_label"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView"
+        android:layout_marginTop="32dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="@+id/setRestaurantQuickId"
+        app:layout_constraintRight_toRightOf="@+id/setRestaurantQuickId"
+        android:textSize="14sp"
+        android:gravity="center" />
+
+    <EditText
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/setRestaurantQuickId"
+        app:layout_constraintLeft_toLeftOf="@+id/setRestaurantSelectButton"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintRight_toRightOf="@+id/setRestaurantSelectButton"
+        tools:text="QuickId"
+        android:hint="@string/find_menu_hint" />
+
+    <Button
+        android:text="@string/set_menu_button_text"
+        android:id="@+id/setRestaurantSelectButton"
+        android:textColor="@android:color/white"
+        android:background="@drawable/orange_rounded_button"
+        android:textSize="14sp"
+        android:textStyle="normal|bold"
+        android:layout_height="48dp"
+        android:layout_width="256dp"
+        app:layout_constraintTop_toBottomOf="@+id/setRestaurantQuickId"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginRight="16dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp" />
+</android.support.constraint.ConstraintLayout>
